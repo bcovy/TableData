@@ -1,0 +1,1 @@
+import { TableData } from "../tabledata.js";

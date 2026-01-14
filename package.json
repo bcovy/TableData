@@ -1,0 +1,46 @@
+{
+  "name": "@skyhill/tabledata",
+  "version": "1.0.0",
+  "description": "JavaScript library that implements an interactive table element with sort and paging functionality",
+  "main": "dist/tabledata_ems.js",
+  "files": [
+    "build",
+    "dist",
+    "src"
+  ],
+  "directories": {
+    "lib": "./src",
+    "test": "./tests"
+  },
+  "scripts": {
+    "test:web": "wtr test/**/*.test.js --node-resolve --puppeteer",
+    "test:watch": "web-test-runner \"test/**/*.test.js\" --node-resolve --watch --puppeteer",
+    "lint": "eslint src",
+    "dev:cssmin": "rollup -c build/rollup.conf.mjs --bundleConfigAsCjs --environment TARGET:cssmin",
+    "dev:scss": "rollup -c build/rollup.conf.mjs --bundleConfigAsCjs --environment TARGET:scss",
+    "dev:js": "rollup -c build/rollup.conf.mjs --bundleConfigAsCjs --environment TARGET:js",
+    "dev:esm": "rollup -c build/rollup.conf.mjs --bundleConfigAsCjs --environment TARGET:esm"
+  },
+  "keywords": [
+    "gird",
+    "table"
+  ],
+  "author": "lance",
+  "license": "ISC",
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@web/test-runner": "^0.20.2",
+    "@web/test-runner-puppeteer": "^0.18.0",
+    "clean-css-cli": "^5.6.3",
+    "eslint": "^9.31.0",
+    "fs-extra": "^11.3.2",
+    "mocha": "11.7.5",
+    "puppeteer": "24.11.0",
+    "rollup": "^4.45.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "1.89.2",
+    "sinon": "^21.0.0",
+    "terser": "^5.43.1"
+  }
+}

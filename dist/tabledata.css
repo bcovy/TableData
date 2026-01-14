@@ -1,0 +1,412 @@
+@charset "UTF-8";
+.tabledata {
+  font-size: 12px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: #fff;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.tabledata thead tr th {
+  padding: 2px;
+  line-height: 1.42857143;
+  vertical-align: bottom;
+  border-top: 0;
+  border-bottom: 2px solid #ddd;
+  box-sizing: border-box;
+}
+.tabledata thead tr .over {
+  border: 2px dashed #000;
+}
+.tabledata thead tr span.sort {
+  cursor: pointer;
+  font-size: 12px;
+}
+.tabledata tbody tr td {
+  padding: 2px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border: 1px solid #dddddd;
+}
+.tabledata tbody tr:nth-child(odd) {
+  background-color: #F3F4F5;
+}
+.tabledata tbody tr.is-selected {
+  background-color: hsl(171, 100%, 41%) !important;
+  color: #fff;
+}
+.tabledata tbody tr.is-danger {
+  background-color: hsl(348, 86%, 61%) !important;
+  color: #fff;
+}
+
+.tabledata-col-12 {
+  width: 100%;
+}
+
+.tabledata-col-11 {
+  width: 91.66666667%;
+}
+
+.tabledata-col-10 {
+  width: 83.33333333%;
+}
+
+.tabledata-col-9 {
+  width: 75%;
+}
+
+.tabledata-col-8 {
+  width: 66.66666667%;
+}
+
+.tabledata-col-7 {
+  width: 58.33333333%;
+}
+
+.tabledata-col-6 {
+  width: 50%;
+}
+
+.tabledata-col-5 {
+  width: 41.66666667%;
+}
+
+.tabledata-col4 {
+  width: 33.33333333%;
+}
+
+.tabledata-col-3 {
+  width: 25%;
+}
+
+.tabledata-col-2 {
+  width: 16.66666667%;
+}
+
+.tabledata-col-1 {
+  width: 8.33333333%;
+}
+
+.tabledata-sort-icon {
+  display: inline-block;
+  font-variant: normal;
+  height: 1em;
+  line-height: 1;
+  text-align: center;
+}
+
+.tabledata-sort-asc::before {
+  content: "▲";
+}
+
+.tabledata-sort-desc::before {
+  content: "▼";
+}
+
+.tabledata-no-header {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.tabledata-input {
+  color: #363636;
+  display: block;
+  font-size: 12px;
+  width: 100%;
+  height: 28px;
+  padding: 1px 1px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  border-color: #dbdbdb;
+  box-sizing: border-box;
+}
+
+.tabledata-multi-select {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  user-select: none;
+}
+
+.tabledata-multi-select-header {
+  border: 1px solid #dee2e6;
+  padding: 2px 30px 2px 12px;
+  overflow: hidden;
+  gap: 7px;
+  height: 28px;
+}
+.tabledata-multi-select-header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23949ba3' viewBox='0 0 16 16'%3E%3Cpath d='M8 13.1l-8-8 2.1-2.2 5.9 5.9 5.9-5.9 2.1 2.2z'/%3E%3C/svg%3E");
+  height: 12px;
+  width: 12px;
+}
+
+.tabledata-multi-select-header-active {
+  border-color: #c1c9d0;
+}
+.tabledata-multi-select-header-active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.tabledata-multi-select-header-active + .tabledata-multi-select-options {
+  display: flex;
+}
+
+.tabledata-multi-select-header-placeholder {
+  color: #65727e;
+}
+
+.tabledata-multi-select-header-option {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f3f4f7;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.tabledata-multi-select-options {
+  display: none;
+  box-sizing: border-box;
+  flex-flow: wrap;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.tabledata-multi-select-options::-webkit-scrollbar {
+  width: 5px;
+}
+.tabledata-multi-select-options::-webkit-scrollbar-track {
+  background: #f0f1f3;
+}
+.tabledata-multi-select-options::-webkit-scrollbar-thumb {
+  background: #cdcfd1;
+}
+
+.tabledata-multi-select-option {
+  padding: 4px 12px;
+  height: 30px;
+}
+
+.tabledata-multi-select-option-radio {
+  margin-right: 14px;
+  height: 12px;
+  width: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+.tabledata-multi-select-option-radio:hover, .tabledata-multi-select-option-radio:active {
+  background-color: #f3f4f7;
+}
+
+.tabledata-multi-select-option-text {
+  box-sizing: border-box;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.tabledata-multi-select-selected .tabledata-multi-select-option-radio {
+  border-color: #40c979;
+  background-color: #40c979;
+}
+.tabledata-multi-select-selected .tabledata-multi-select-option-radio::after {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 7px;
+  margin: 0.12em 0 0 0.27em;
+  border: solid #fff;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+.tabledata-multi-select-selected .tabledata-multi-select-option-text {
+  color: #40c979;
+}
+
+.tabledata-multi-select-header, .tabledata-multi-select-option {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  font-weight: normal;
+  color: #212529;
+}
+
+.tabledata-between-button {
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid transparent;
+  color: hsl(0, 0%, 21%);
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tabledata-between-input-label {
+  box-sizing: border-box;
+  flex: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(0, 178, 255);
+}
+[data-tooltip].tabledata-tooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  display: inline-block;
+  right: -80%;
+  transform: translateX(-50%);
+  background-color: rgba(74, 74, 74, 0.9);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  height: auto;
+  width: 20rem;
+  max-width: 20rem;
+  text-overflow: clip;
+  white-space: normal;
+  word-break: keep-all;
+}
+[data-tooltip].tabledata-tooltip:hover::before, [data-tooltip].tabledata-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+[data-tooltip].tabledata-tooltip::after {
+  content: "";
+  position: absolute;
+  visibility: hidden;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-50%);
+  border-style: solid;
+}
+[data-tooltip].tabledata-tooltip-right::before {
+  top: 50%;
+  left: auto;
+  right: -30%;
+  bottom: auto;
+  transform: translate(100%, -40%);
+}
+[data-tooltip].tabledata-tooltip-right::after {
+  top: 50%;
+  bottom: auto;
+  left: auto;
+  right: -30%;
+  transition: opacity 0.3s ease;
+  margin: auto auto -6px -6px;
+  border-width: 6px 6px 6px 0;
+  border-color: transparent rgba(74, 74, 74, 0.9) transparent transparent;
+}
+[data-tooltip].tabledata-tooltip-left::before {
+  top: 50%;
+  left: -60px;
+  right: auto;
+  bottom: auto;
+  transform: translate(-85%, -40%);
+}
+[data-tooltip].tabledata-tooltip-left::after {
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  left: -9px;
+  transition: opacity 0.3s ease;
+  margin: auto -6px -6px auto;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent rgba(74, 74, 74, 0.9);
+}
+
+/*
+* Pager control
+* ----------------  
+*/
+.tabledata-pager {
+  text-align: center;
+}
+.tabledata-pager ul {
+  justify-content: center;
+  display: inline-flex;
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+}
+.tabledata-pager li + li button {
+  margin-left: 3px;
+}
+.tabledata-pager button {
+  background-color: #FFFFFF;
+  border-radius: 9999px;
+  border: 1px solid #DDDDDD;
+  box-sizing: content-box;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.3em 0.6em;
+  text-align: center;
+  cursor: pointer;
+  color: #337AB7;
+}
+.tabledata-pager button:focus, .tabledata-pager button:hover {
+  background-color: #F7F7F7;
+  color: #014C8C;
+}
+.tabledata-pager .active button {
+  background-color: #0275D8;
+  border-color: #0275D8;
+  color: #FFFFFF;
+}
+.tabledata-pager .disabled button {
+  background-color: #EFEFEF;
+  text-decoration: none;
+  cursor: not-allowed;
+  color: #777777;
+  outline: none;
+}

@@ -1,0 +1,109 @@
+@use "./tabledataVars.scss" as dv;
+
+.tabledata {
+    font-size: dv.$grid-font-size;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: dv.$grid-background-color;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: dv.$grid-margin-bottom; 
+    thead {
+        & tr {
+            th {
+                padding: 2px;
+                line-height: 1.42857143;
+                vertical-align: bottom;
+                border-top: 0;
+                border-bottom: 2px solid #ddd;
+                box-sizing: border-box;
+            }
+            & .over {
+                border: 2px dashed #000;
+            }
+            & span.sort {
+                cursor: pointer;
+                font-size: dv.$header-font-size;
+            }
+        }
+    }
+    tbody {
+        & tr {
+            td {
+                padding: 2px;
+                line-height: 1.42857143;
+                vertical-align: top;
+                border: 1px solid #dddddd;
+            }
+            &:nth-child(odd) {
+                background-color: #F3F4F5;
+            }
+            &.is-selected {
+                background-color: hsl(171, 100%, 41%) !important;
+                color: #fff;
+            }
+            &.is-danger {
+                background-color: hsl(348, 86%, 61%) !important;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.tabledata-col-12 {
+    width: 100%;
+}
+.tabledata-col-11 {
+    width: 91.66666667%;
+}
+.tabledata-col-10 {
+    width: 83.33333333%;
+}
+.tabledata-col-9 {
+    width: 75%;
+}
+.tabledata-col-8 {
+    width: 66.66666667%;
+}
+.tabledata-col-7 {
+    width: 58.33333333%;
+}
+.tabledata-col-6 {
+    width: 50%;
+}
+.tabledata-col-5 {
+    width: 41.66666667%;
+}
+.tabledata-col4 {
+    width: 33.33333333%;
+}
+.tabledata-col-3 {
+    width: 25%;
+}
+.tabledata-col-2 {
+    width: 16.66666667%;
+}
+.tabledata-col-1 {
+    width: 8.33333333%;
+}
+.tabledata-sort-icon {
+    display: inline-block;
+    font-variant: normal;
+    height: 1em;
+    line-height: 1;
+    text-align: center;
+}
+.tabledata-sort-asc {
+    &::before {
+        content: "\25B2";
+    }
+}
+.tabledata-sort-desc {
+    &::before {
+        content: "\25BC";
+    }
+}
+.tabledata-no-header {
+    display: block;
+    padding-bottom: 30px;
+}
